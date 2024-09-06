@@ -1,36 +1,4 @@
-<!-- <h1>Cím</h1>
-
-<h3>Szia {{nev}}</h3>
-<p>{{tomb}}</p>
-
-<p>{{ember|json}}</p>
-
-<p>Név: {{ember[0].nev}}</p>
-<p>Kor: {{ember[0].kor}}</p> -->
-
-<div class="m-3">
-  <div class="row fw-bold">
-    <div *ngFor="let oszlopNev of oszlopok" class="col">{{oszlopNev}}</div>
-    <div class="col">
-      Műveletek
-    </div>
-  </div>
-
-  <div class="row m-2">
-    <div *ngFor="let oszlopNev of oszlopok" class="col">
-      <input [(ngModel)]='ujEmber[oszlopNev]' type="text" class="form-control">
-    </div>
-    <div class="col">
-      <button (click)="hozzaAd()" type="button" class="btn btn-success">Hozzáadás</button>
-    </div>
-  </div>
-
-  <div *ngFor="let ember of emberek" class="row m-2">
-    <div *ngFor="let oszlopNev of oszlopok" class="col">
-      <input [(ngModel)]='ember[oszlopNev]' type="text" class="form-control">
-    </div>
-    <div class="col">
-      <button (click)="torles(ember)" type="button" class="btn btn-danger">Törlés</button>
-    </div>
-  </div>
+<app-navbar></app-navbar>
+<div class="container">
+  <router-outlet></router-outlet>
 </div>
